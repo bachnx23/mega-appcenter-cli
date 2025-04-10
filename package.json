@@ -13,7 +13,7 @@
   },
   "main": "dist/index.js",
   "bin": {
-    "appcenter": "./bin/appcenter.js"
+    "mega-appcenter": "./bin/appcenter.js"
   },
   "preferGlobal": true,
   "scripts": {
