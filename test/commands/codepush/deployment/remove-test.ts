@@ -44,7 +44,7 @@ describe("codepush deployment remove tests", () => {
     const outTextSpy = sandbox.spy(out, "text");
     sandbox.stub(prompt, "confirm").resolves(true);
 
-    Nock("https://api.appcenter.ms/").delete(`/v0.1/apps/${app}/deployments/${deployment}`).reply(204, {});
+    Nock("https://api.appcenter.megaads.fun/").delete(`/v0.1/apps/${app}/deployments/${deployment}`).reply(204, {});
 
     // Act
     const result = await removeCommand.execute();
@@ -58,7 +58,7 @@ describe("codepush deployment remove tests", () => {
     // Arrange
     const removeCommand = new CodePushRemoveDeploymentCommand(args);
     sandbox.stub(prompt, "confirm").resolves(true);
-    Nock("https://api.appcenter.ms/").delete(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
+    Nock("https://api.appcenter.megaads.fun/").delete(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
 
     // Act
     const result = await removeCommand.execute();
@@ -73,7 +73,7 @@ describe("codepush deployment remove tests", () => {
     const removeCommand = new CodePushRemoveDeploymentCommand(args);
     const errorMessage = "Some error message";
     sandbox.stub(prompt, "confirm").resolves(true);
-    Nock("https://api.appcenter.ms/").delete(`/v0.1/apps/${app}/deployments/${deployment}`).reply(405, errorMessage);
+    Nock("https://api.appcenter.megaads.fun/").delete(`/v0.1/apps/${app}/deployments/${deployment}`).reply(405, errorMessage);
 
     // Act
     const result = await removeCommand.execute();

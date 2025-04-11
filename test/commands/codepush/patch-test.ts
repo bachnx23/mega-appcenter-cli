@@ -42,7 +42,7 @@ describe("codepush patch", function () {
   it("patch works successfully with all parameters provided", async function () {
     // Arrange
     const patchCommand = new PatchCommand(goldenPathArgs);
-    Nock("https://api.appcenter.ms/")
+    Nock("https://api.appcenter.megaads.fun/")
       .patch(`/v0.1/apps/${app}/deployments/${deployment}/releases/${releaseLabel}`)
       .reply(204, { success: true });
 
@@ -121,7 +121,7 @@ describe("codepush patch", function () {
     // Arrange
     const patchCommand = new PatchCommand(goldenPathArgs);
     const errorMessage = "some error message";
-    Nock("https://api.appcenter.ms/")
+    Nock("https://api.appcenter.megaads.fun/")
       .patch(`/v0.1/apps/${app}/deployments/${deployment}/releases/${releaseLabel}`)
       .reply(400, errorMessage);
 
@@ -141,7 +141,7 @@ describe("codepush patch", function () {
         args: ["--rollout", "50", "--app", app, deployment, "--token", getFakeParamsForRequest().token],
       };
       const patchCommand = new PatchCommand(args);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(200, null);
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(200, null);
 
       // Act
       const result = patchCommand.execute();
@@ -157,7 +157,7 @@ describe("codepush patch", function () {
         args: ["--rollout", "50", "--app", app, deployment, "--token", getFakeParamsForRequest().token],
       };
       const patchCommand = new PatchCommand(args);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(1, "errorMessage");
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(1, "errorMessage");
 
       // Act
       const result = patchCommand.execute();
@@ -173,7 +173,7 @@ describe("codepush patch", function () {
         args: ["--rollout", "50", "--app", app, deployment, "--token", getFakeParamsForRequest().token],
       };
       const patchCommand = new PatchCommand(args);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(400, "errorMessage");
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(400, "errorMessage");
 
       // Act
       const result = patchCommand.execute();
@@ -189,7 +189,7 @@ describe("codepush patch", function () {
         args: ["--rollout", "50", "--app", app, deployment, "--token", getFakeParamsForRequest().token],
       };
       const patchCommand = new PatchCommand(args);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(401, "errorMessage");
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(401, "errorMessage");
 
       // Act
       const result = patchCommand.execute();
@@ -205,7 +205,7 @@ describe("codepush patch", function () {
         args: ["--rollout", "50", "--app", app, deployment, "--token", getFakeParamsForRequest().token],
       };
       const patchCommand = new PatchCommand(args);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(200, []);
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}/releases`).reply(200, []);
 
       // Act
       const result = patchCommand.execute();

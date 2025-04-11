@@ -50,8 +50,8 @@ describe("codepush release-cordova command", function () {
     // Arrange
     const os = "iOS";
     const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os,
       platform: "cordova",
     });
@@ -68,7 +68,7 @@ describe("codepush release-cordova command", function () {
   it("returns graceful error when deployment doesn't exists", async function () {
     // Arrange
     const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
 
     // Act
     const result = (await command.execute()) as CommandFailedResult;
@@ -81,8 +81,8 @@ describe("codepush release-cordova command", function () {
       it(`only iOS and Android allowed, check ${os}`, async function () {
         // Arrange
         const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "cordova",
         });
@@ -100,8 +100,8 @@ describe("codepush release-cordova command", function () {
       // Arrange
       const os = "Windows";
       const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "cordova",
       });
@@ -116,8 +116,8 @@ describe("codepush release-cordova command", function () {
   it("fails the command if non cordova platform is returned for the app", async function () {
     // Arrange
     const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os: "iOS",
       platform: "React-Native",
     });
@@ -142,8 +142,8 @@ describe("codepush release-cordova command", function () {
       ],
     };
     const command = new CodePushReleaseCordovaCommand(args);
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os,
       platform: "cordova",
     });
@@ -183,8 +183,8 @@ describe("codepush release-cordova command", function () {
       ],
     };
     const command = new CodePushReleaseCordovaCommand(args);
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os,
       platform: "cordova",
     });
@@ -211,8 +211,8 @@ describe("codepush release-cordova command", function () {
           ],
         };
         const command = new CodePushReleaseCordovaCommand(args);
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "cordova",
         });
@@ -242,8 +242,8 @@ describe("codepush release-cordova command", function () {
           ],
         };
           const command = new CodePushReleaseCordovaCommand(args);
-          Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-          Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+          Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+          Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
             os,
             platform: "cordova",
           });
@@ -271,8 +271,8 @@ describe("codepush release-cordova command", function () {
           ],
         };
           const command = new CodePushReleaseCordovaCommand(args);
-          Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-          Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+          Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+          Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
             os,
             platform: "cordova",
           });
@@ -292,8 +292,8 @@ describe("codepush release-cordova command", function () {
         // Arrange
         const os = "iOS";
         const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "cordova",
         });
@@ -310,8 +310,8 @@ describe("codepush release-cordova command", function () {
         // Arrange
         const os = "iOS";
         const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "cordova",
         });
@@ -329,8 +329,8 @@ describe("codepush release-cordova command", function () {
         // Arrange
         const os = "iOS";
         const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "cordova",
         });
@@ -354,8 +354,8 @@ describe("codepush release-cordova command", function () {
       const os = "iOS";
       const iosPath = path.join("platforms", os.toLowerCase(), "www").replace(/\\/g, "\\\\");
       const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "cordova",
       });
@@ -373,8 +373,8 @@ describe("codepush release-cordova command", function () {
       const os = "Android";
       const androidPath = path.join("platforms", os.toLowerCase(), "app", "src", "main", "assets", "www").replace(/\\/g, "\\\\");
       const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "cordova",
       });
@@ -397,8 +397,8 @@ describe("codepush release-cordova command", function () {
         .replace(/\\/g, "\\\\");
       const androidPath = path.join("platforms", os.toLowerCase(), "assets", "www").replace(/\\/g, "\\\\");
       const command = new CodePushReleaseCordovaCommand(goldenPathArgs);
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "cordova",
       });

@@ -63,8 +63,8 @@ describe("codepush release-electron command", function () {
     }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os: "Windows",
       platform: "electron",
     });
@@ -135,8 +135,8 @@ describe("codepush release-electron command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "Windows",
         platform: "electron",
       });
@@ -169,8 +169,8 @@ describe("codepush release-electron command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "MacOS",
         platform: "electron",
       });
@@ -190,7 +190,7 @@ describe("codepush release-electron command", function () {
   it("shows user friendly error when incorrect deployment specified", async function () {
     // Arrange
     const command = new CodePushReleaseElectronCommand(goldenPathArgs);
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
     sandbox.stub(fs, "readFileSync").returns(`
       {
         "name": "electron-bogus-app",
@@ -232,8 +232,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "Windows",
         platform: "electron",
       });
@@ -276,8 +276,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "Windows",
         platform: "electron",
       });
@@ -311,8 +311,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "electron",
       });
@@ -343,8 +343,8 @@ describe("codepush release-electron command", function () {
     }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os: "MacOS",
       platform: "objective-c",
     });
@@ -380,8 +380,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os,
       platform: "electron",
     });
@@ -425,8 +425,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "electron",
         });
@@ -467,8 +467,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "electron",
         });
@@ -510,8 +510,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "electron",
         });
@@ -554,8 +554,8 @@ describe("codepush release-electron command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "Windows",
         platform: "electron",
       });
@@ -598,8 +598,8 @@ describe("codepush release-electron command", function () {
       }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os,
       platform: "electron",
     });
@@ -641,8 +641,8 @@ describe("codepush release-electron command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "electron",
       });
@@ -680,8 +680,8 @@ describe("codepush release-electron command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "electron",
       });

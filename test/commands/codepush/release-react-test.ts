@@ -74,8 +74,8 @@ describe("codepush release-react command", function () {
     }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os: "iOS",
       platform: "react-native",
     });
@@ -152,8 +152,8 @@ describe("codepush release-react command", function () {
     }
     `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "iOS",
         platform: "react-native",
       });
@@ -188,8 +188,8 @@ describe("codepush release-react command", function () {
     }
     `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "iOS",
         platform: "react-native",
       });
@@ -222,7 +222,7 @@ describe("codepush release-react command", function () {
     }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(404, {});
 
     // Act
     const result = (await command.execute()) as CommandFailedResult;
@@ -257,8 +257,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "Android",
         platform: "react-native",
       });
@@ -304,8 +304,8 @@ describe("codepush release-react command", function () {
                 }
               `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "Android",
         platform: "react-native",
       });
@@ -342,8 +342,8 @@ describe("codepush release-react command", function () {
                       }
                     `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -378,8 +378,8 @@ describe("codepush release-react command", function () {
     }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os: "iOS",
       platform: "objective-c",
     });
@@ -415,8 +415,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "iOS",
         platform: "react-native",
       });
@@ -460,8 +460,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -508,8 +508,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "react-native",
         });
@@ -553,8 +553,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "react-native",
         });
@@ -599,8 +599,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-        Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+        Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
           os,
           platform: "react-native",
         });
@@ -645,8 +645,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os: "Android",
         platform: "react-native",
       });
@@ -691,8 +691,8 @@ describe("codepush release-react command", function () {
       }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os,
       platform: "react-native",
     });
@@ -737,8 +737,8 @@ describe("codepush release-react command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -779,8 +779,8 @@ describe("codepush release-react command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -826,8 +826,8 @@ describe("codepush release-react command", function () {
       }
     `);
 
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-    Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+    Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
       os,
       platform: "react-native",
     });
@@ -872,8 +872,8 @@ describe("codepush release-react command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -918,8 +918,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -967,8 +967,8 @@ describe("codepush release-react command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -1015,8 +1015,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -1063,8 +1063,8 @@ describe("codepush release-react command", function () {
         }
       `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -1132,8 +1132,8 @@ describe("codepush release-react command", function () {
           }
         `);
 
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-      Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+      Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
         os,
         platform: "react-native",
       });
@@ -1184,8 +1184,8 @@ describe("codepush release-react command", function () {
               }
             `);
 
-          Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
-          Nock("https://api.appcenter.ms/").get(`/v0.1/apps/${app}`).reply(200, {
+          Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}/deployments/${deployment}`).reply(200, {});
+          Nock("https://api.appcenter.megaads.fun/").get(`/v0.1/apps/${app}`).reply(200, {
             os,
             platform: "react-native",
           });

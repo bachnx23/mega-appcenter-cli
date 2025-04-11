@@ -29,7 +29,7 @@ describe("codepush promote", function () {
   it("promote works successfully with all parameters provided", async function () {
     // Arrange
     const promoteCommand = new CodePushPromoteCommand(goldenPathArgs);
-    Nock("https://api.appcenter.ms/")
+    Nock("https://api.appcenter.megaads.fun/")
       .post(`/v0.1/apps/${app}/deployments/${sourceDeploymentName}/promote_release/${deployment}`)
       .reply(200, { success: true });
 
@@ -49,7 +49,7 @@ describe("codepush promote", function () {
     };
     const outTextSpy = sandbox.spy(out, "text");
     const promoteCommand = new CodePushPromoteCommand(args);
-    Nock("https://api.appcenter.ms/")
+    Nock("https://api.appcenter.megaads.fun/")
       .post(`/v0.1/apps/${app}/deployments/${sourceDeploymentName}/promote_release/${deployment}`)
       .reply(200, { success: true });
 
@@ -123,7 +123,7 @@ describe("codepush promote", function () {
     };
     const promoteCommand = new CodePushPromoteCommand(args);
     const consoleWarnSpy = sandbox.spy(console, "warn");
-    Nock("https://api.appcenter.ms/")
+    Nock("https://api.appcenter.megaads.fun/")
       .post(`/v0.1/apps/${app}/deployments/${sourceDeploymentName}/promote_release/${deployment}`)
       .reply(409, { message: "Error" });
 
@@ -138,7 +138,7 @@ describe("codepush promote", function () {
     // Arrange
     const promoteCommand = new CodePushPromoteCommand(goldenPathArgs);
     const errorMessage = "Some error message";
-    Nock("https://api.appcenter.ms/")
+    Nock("https://api.appcenter.megaads.fun/")
       .post(`/v0.1/apps/${app}/deployments/${sourceDeploymentName}/promote_release/${deployment}`)
       .reply(410, errorMessage);
 

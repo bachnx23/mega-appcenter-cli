@@ -21,7 +21,7 @@ export function getFakeParamsForRequest(): FakeParamsForRequests {
     appName: "fakeAppName",
     path: "fake/path",
     appVersion: "v0.1",
-    host: "https://api.appcenter.ms/",
+    host: "https://api.appcenter.megaads.fun/",
     token: "c1o3d3e7",
   };
 
